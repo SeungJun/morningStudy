@@ -35,14 +35,16 @@ class ArrayStack implements Stack {
             return arr[top--];
         }
     }
-
+    // 현재 저장되어 있는 정수의 개수를 가져온다.
     public int getSize(){
         return top+1;
     }
+    // 스택이 비어있다면 1을 반환 아닐경우 0 반
     public int isEmpty() {
         if(top == -1) return 1;
         else return 0;
     }
+    // 스택의 탑을 반환
     public int peek(){
         if(top == -1) return -1;
         return arr[top];
@@ -57,7 +59,6 @@ class ArrayStack implements Stack {
 public class BOJ10828 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         int test_case = Integer.parseInt(br.readLine());
         ArrayStack stack = new ArrayStack(10000);
         for (int i = 0; i < test_case; i++) {
